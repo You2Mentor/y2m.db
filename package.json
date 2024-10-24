@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "migrate": "prisma migrate dev --skip-generate",
+    "migrate": "prisma migrate dev --skip-generate --skip-seed",
+    "seed": "ts-node prisma/seed.ts",
+    "reset": "prisma migrate reset --skip-generate --skip-seed",
     "format": "prisma format"
   },
   "keywords": [],
@@ -13,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.12.5",
-    "prisma": "^5.12.1",
+    "prisma": "^5.21.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
   },
